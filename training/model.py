@@ -3,6 +3,6 @@ class Model:
         # モデルの初期化
         pass
 
-    def train(self, train_data, val_data):
+    def train(self, train_data, test_data):
         # 学習ロジック
         pass

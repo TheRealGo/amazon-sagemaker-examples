@@ -43,13 +43,13 @@ if __name__ == '__main__':
         f.write(result)
 
     # 学習データの読み込み
-    train_data, val_data = load_data(args.train, args.test)
+    train_data, test_data = load_data(args.train, args.test)
 
     # モデルの定義
     model = Model(args)
 
     # モデルの学習
-    model.train(train_data, val_data)
+    model.train(train_data, test_data)
 
     with open(Path(args.model_dir).joinpath("model.pth"), "w") as f:
         f.write("MODEL")
