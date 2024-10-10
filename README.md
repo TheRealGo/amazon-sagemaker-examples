@@ -53,7 +53,7 @@ training/
   - preprocess_functionによるデータの前処理。
   - 必要に応じて、その他のユーティリティ関数を追加。
 
-## [requirements.txt](training/requirements.txt)
+### [requirements.txt](training/requirements.txt)
 - 役割: プロジェクトで使用するPythonパッケージを列挙。
 - 特徴: pipで一括インストールが可能。
 - 機能:
