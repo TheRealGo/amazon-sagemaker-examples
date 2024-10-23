@@ -1,6 +1,10 @@
+import subprocess
+
+# requirements.txtを--no-depsオプションでインストール
+subprocess.check_call(['pip', 'install', '--no-deps', '-r', 'requirements.txt'])
+
 import argparse
 import os
-import subprocess
 from pathlib import Path
 
 from data_loader import load_data
@@ -26,10 +30,8 @@ def parse_args():
 
     return parser
 
-if __name__ == '__main__':
-    # requirements.txtを--no-depsオプションでインストール
-    subprocess.check_call(['pip', 'install', '--no-deps', '-r', 'requirements.txt'])
 
+if __name__ == '__main__':
     # 引数の設定
     parser = parse_args()
     args, _ = parser.parse_known_args()
