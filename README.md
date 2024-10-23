@@ -15,7 +15,7 @@ training/
 
 ## ファイルの役割
 
-### [train.py](training/train.py)
+### [train.py](training-SupervisedLearning/train.py)
 - 役割: SageMakerで実行するためのメインスクリプト。
 - 特徴: 全プロジェクトで共通のコードを含み、変更は加えません。
 - 機能:
@@ -24,20 +24,20 @@ training/
   - モデルの定義。
   - モデルの学習プロセスの開始。
 
-### [data_loader.py](training/data_loader.py)
+### [data_loader.py](training-SupervisedLearning/data_loader.py)
 - 役割: データの読み込みと基本的な前処理を行う。
 - 特徴: プロジェクトごとに学習に利用するデータを定義。
 - 機能:
   - データセットの読み込み。
   - データの分割やシャッフルなどの基本的な処理。
 
-### [decorators.py](training/decorators.py)
+### [decorators.py](training-SupervisedLearning/decorators.py)
 - 役割: プロジェクト特有の引数を追加するためのデコレータを定義。
 - 特徴: train.pyの引数パーサーに追加の引数を簡潔に追加。
 - 機能:
   - @project_decoratorデコレータを使用して、プロジェクト固有の引数をパーサーに追加。
 
-### [model.py](training/model.py)
+### [model.py](training-SupervisedLearning/model.py)
 - 役割: モデルの定義とトレーニングのロジックを含む。
 - 特徴: プロジェクトごとに使用するモデルを定義。
 - 機能:
@@ -46,14 +46,14 @@ training/
   - トレーナーの作成とトレーニングの実行。
   - モデルの保存。
 
-### [utils.py](training/utils.py)
+### [utils.py](training-SupervisedLearning/utils.py)
 - 役割: プロジェクト固有の補助関数を定義。
 - 特徴: データの前処理やチェックポイントの保存などの関数を含む。
 - 機能:
   - preprocess_functionによるデータの前処理。
   - 必要に応じて、その他のユーティリティ関数を追加。
 
-### [requirements.txt](training/requirements.txt)
+### [requirements.txt](training-SupervisedLearning/requirements.txt)
 - 役割: プロジェクトで使用するPythonパッケージを列挙。
 - 特徴: pipで一括インストールが可能。
 - 機能:
